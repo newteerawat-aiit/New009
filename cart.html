@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตะกร้าสินค้า - ToyLand</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🧸 ToyLand</h1>
+
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="products.html">สินค้า</a>
+        <a href="cart.html">ตะกร้า 🛒</a>
+    </nav>
+</header>
+
+<main class="cart">
+    <h2>🛒 ตะกร้าสินค้า</h2>
+
+    <div id="cart-items"></div>
+
+    <hr>
+
+    <h3>ราคารวม: <span id="total">0</span> บาท</h3>
+
+    <h3>ส่วนลด: <span id="discount">0</span> บาท</h3>
+
+    <h2>ราคาสุทธิ: <span id="final-price">0</span> บาท</h2>
+
+    <button onclick="clearCart()">
+        ล้างตะกร้า
+    </button>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

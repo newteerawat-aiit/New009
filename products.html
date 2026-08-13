@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สินค้า - ToyLand</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🧸 ToyLand</h1>
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="products.html">สินค้า</a>
+        <a href="cart.html">ตะกร้า 🛒</a>
+    </nav>
+</header>
+
+<main>
+    <h2>สินค้าของเรา</h2>
+
+    <div class="products">
+
+        <div class="product">
+            <div class="product-image">🧸</div>
+            <h3>ตุ๊กตาหมี</h3>
+            <p>ราคา 299 บาท</p>
+            <button onclick="addToCart('ตุ๊กตาหมี', 299)">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image">🚗</div>
+            <h3>รถบังคับ</h3>
+            <p>ราคา 599 บาท</p>
+            <button onclick="addToCart('รถบังคับ', 599)">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image">🧩</div>
+            <h3>เกมตัวต่อ</h3>
+            <p>ราคา 399 บาท</p>
+            <button onclick="addToCart('เกมตัวต่อ', 399)">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image">🤖</div>
+            <h3>หุ่นยนต์แปลงร่าง</h3>
+            <p>ราคา 790 บาท</p>
+            <button onclick="addToCart('หุ่นยนต์แปลงร่าง', 790)">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image">🎮</div>
+            <h3>เครื่องเกมพกพา</h3>
+            <p>ราคา 1250 บาท</p>
+            <button onclick="addToCart('เครื่องเกมพกพา', 1250)">เพิ่มลงตะกร้า</button>
+        </div>
+
+        <div class="product">
+            <div class="product-image">🎨</div>
+            <h3>ชุดอุปกรณ์ระบายสี</h3>
+            <p>ราคา 150 บาท</p>
+            <button onclick="addToCart('ชุดอุปกรณ์ระบายสี', 150)">เพิ่มลงตะกร้า</button>
+        </div>
+
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
