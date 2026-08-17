@@ -20,51 +20,164 @@
 <main>
     <h2>สินค้าของเรา</h2>
 
-    <div class="products">
+   <div class="products">
 
-        <div class="product">
-            <div class="product-image">🧸</div>
-            <h3>ตุ๊กตาหมี</h3>
-            <p>ราคา 299 บาท</p>
-            <button onclick="addToCart('ตุ๊กตาหมี', 299)">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <div class="product">
-            <div class="product-image">🚗</div>
-            <h3>รถบังคับ</h3>
-            <p>ราคา 599 บาท</p>
-            <button onclick="addToCart('รถบังคับ', 599)">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <div class="product">
-            <div class="product-image">🧩</div>
-            <h3>เกมตัวต่อ</h3>
-            <p>ราคา 399 บาท</p>
-            <button onclick="addToCart('เกมตัวต่อ', 399)">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <div class="product">
-            <div class="product-image">🤖</div>
-            <h3>หุ่นยนต์แปลงร่าง</h3>
-            <p>ราคา 790 บาท</p>
-            <button onclick="addToCart('หุ่นยนต์แปลงร่าง', 790)">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <div class="product">
-            <div class="product-image">🎮</div>
-            <h3>เครื่องเกมพกพา</h3>
-            <p>ราคา 1250 บาท</p>
-            <button onclick="addToCart('เครื่องเกมพกพา', 1250)">เพิ่มลงตะกร้า</button>
-        </div>
-
-        <div class="product">
-            <div class="product-image">🎨</div>
-            <h3>ชุดอุปกรณ์ระบายสี</h3>
-            <p>ราคา 150 บาท</p>
-            <button onclick="addToCart('ชุดอุปกรณ์ระบายสี', 150)">เพิ่มลงตะกร้า</button>
-        </div>
-
+  <!-- 1. ตุ๊กตาหมี -->
+  <div class="product">
+    <div class="product-icon">🧸</div>
+    <h3>ตุ๊กตาหมี</h3>
+    <p class="price">ราคา <span>299</span> บาท</p>
+    <div class="product-options">
+      <div class="option-group">
+        <label for="size-bear">ขนาด:</label>
+        <select id="size-bear" class="option-select">
+          <option value="S (เล็ก)">S (เล็ก)</option>
+          <option value="M (กลาง)" selected>M (กลาง)</option>
+          <option value="L (ใหญ่)">L (ใหญ่)</option>
+        </select>
+      </div>
+      <div class="option-group">
+        <label for="color-bear">สี:</label>
+        <select id="color-bear" class="option-select">
+          <option value="น้ำตาล">น้ำตาล</option>
+          <option value="ขาว">ขาว</option>
+          <option value="ชมพู">ชมพู</option>
+        </select>
+      </div>
     </div>
+    <button class="add-to-cart-btn" onclick="addToCart('ตุ๊กตาหมี', 299, 'size-bear', 'color-bear')">เพิ่มลงตะกร้า</button>
+  </div>
+
+  <!-- 2. รถบังคับ -->
+  <div class="product">
+    <div class="product-icon">🚗</div>
+    <h3>รถบังคับ</h3>
+    <p class="price">ราคา <span>599</span> บาท</p>
+    <div class="product-options">
+      <div class="option-group">
+        <label for="size-car">ขนาด:</label>
+        <select id="size-car" class="option-select">
+          <option value="อัตราส่วน 1:18">อัตราส่วน 1:18</option>
+          <option value="อัตราส่วน 1:14" selected>อัตราส่วน 1:14</option>
+        </select>
+      </div>
+      <div class="option-group">
+        <label for="color-car">สี:</label>
+        <select id="color-car" class="option-select">
+          <option value="แดง">แดง</option>
+          <option value="น้ำเงิน">น้ำเงิน</option>
+          <option value="ดำ">ดำ</option>
+        </select>
+      </div>
+    </div>
+    <button class="add-to-cart-btn" onclick="addToCart('รถบังคับ', 599, 'size-car', 'color-car')">เพิ่มลงตะกร้า</button>
+  </div>
+
+  <!-- 3. เกมตัวต่อ -->
+  <div class="product">
+    <div class="product-icon">🧩</div>
+    <h3>เกมตัวต่อ</h3>
+    <p class="price">ราคา <span>399</span> บาท</p>
+    <div class="product-options">
+      <div class="option-group">
+        <label for="size-puzzle">จำนวนชิ้น:</label>
+        <select id="size-puzzle" class="option-select">
+          <option value="100 ชิ้น">100 ชิ้น</option>
+          <option value="500 ชิ้น" selected>500 ชิ้น</option>
+          <option value="1000 ชิ้น">1000 ชิ้น</option>
+        </select>
+      </div>
+      <div class="option-group">
+        <label for="color-puzzle">ธีมภาพ:</label>
+        <select id="color-puzzle" class="option-select">
+          <option value="ธรรมชาติ">ธรรมชาติ</option>
+          <option value="การ์ตูน">การ์ตูน</option>
+          <option value="อวกาศ">อวกาศ</option>
+        </select>
+      </div>
+    </div>
+    <button class="add-to-cart-btn" onclick="addToCart('เกมตัวต่อ', 399, 'size-puzzle', 'color-puzzle')">เพิ่มลงตะกร้า</button>
+  </div>
+
+  <!-- 4. หุ่นยนต์แปลงร่าง -->
+  <div class="product">
+    <div class="product-icon">🤖</div>
+    <h3>หุ่นยนต์แปลงร่าง</h3>
+    <p class="price">ราคา <span>790</span> บาท</p>
+    <div class="product-options">
+      <div class="option-group">
+        <label for="size-robot">ขนาด:</label>
+        <select id="size-robot" class="option-select">
+          <option value="ปกติ (20 ซม.)">ปกติ (20 ซม.)</option>
+          <option value="ใหญ่ (35 ซม.)">ใหญ่ (35 ซม.)</option>
+        </select>
+      </div>
+      <div class="option-group">
+        <label for="color-robot">สี/โมเดล:</label>
+        <select id="color-robot" class="option-select">
+          <option value="แดง-น้ำเงิน">แดง-น้ำเงิน</option>
+          <option value="เหลือง-ดำ">เหลือง-ดำ</option>
+          <option value="เงิน-เหล็ก">เงิน-เหล็ก</option>
+        </select>
+      </div>
+    </div>
+    <button class="add-to-cart-btn" onclick="addToCart('หุ่นยนต์แปลงร่าง', 790, 'size-robot', 'color-robot')">เพิ่มลงตะกร้า</button>
+  </div>
+
+  <!-- 5. เครื่องเกมพกพา -->
+  <div class="product">
+    <div class="product-icon">🎮</div>
+    <h3>เครื่องเกมพกพา</h3>
+    <p class="price">ราคา <span>1250</span> บาท</p>
+    <div class="product-options">
+      <div class="option-group">
+        <label for="size-console">ความจุ:</label>
+        <select id="size-console" class="option-select">
+          <option value="32 GB">32 GB</option>
+          <option value="64 GB" selected>64 GB</option>
+          <option value="128 GB">128 GB</option>
+        </select>
+      </div>
+      <div class="option-group">
+        <label for="color-console">สีเครื่อง:</label>
+        <select id="color-console" class="option-select">
+          <option value="ดำ">ดำ</option>
+          <option value="ขาว">ขาว</option>
+          <option value="นีออน">นีออน</option>
+        </select>
+      </div>
+    </div>
+    <button class="add-to-cart-btn" onclick="addToCart('เครื่องเกมพกพา', 1250, 'size-console', 'color-console')">เพิ่มลงตะกร้า</button>
+  </div>
+
+  <!-- 6. ชุดอุปกรณ์ระบายสี -->
+  <div class="product">
+    <div class="product-icon">🎨</div>
+    <h3>ชุดอุปกรณ์ระบายสี</h3>
+    <p class="price">ราคา <span>150</span> บาท</p>
+    <div class="product-options">
+      <div class="option-group">
+        <label for="type-paint">ประเภทสี:</label>
+        <select id="type-paint" class="option-select">
+          <option value="สีไม้">สีไม้</option>
+          <option value="สีน้ำ" selected>สีน้ำ</option>
+          <option value="สีอะคริลิก">สีอะคริลิก</option>
+        </select>
+      </div>
+      <div class="option-group">
+        <label for="count-paint">จำนวนสี:</label>
+        <select id="count-paint" class="option-select">
+          <option value="12 สี">12 สี</option>
+          <option value="24 สี" selected>24 สี</option>
+          <option value="36 สี">36 สี</option>
+        </select>
+      </div>
+    </div>
+    <button class="add-to-cart-btn" onclick="addToCart('ชุดอุปกรณ์ระบายสี', 150, 'type-paint', 'count-paint')">เพิ่มลงตะกร้า</button>
+  </div>
+
+</div>
+
 </main>
 
 <script src="script.js"></script>
